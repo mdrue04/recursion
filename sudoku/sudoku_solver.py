@@ -13,9 +13,9 @@ class SudokuSolver():
                 if self.grid[i, j] == 0:
                     for number in range(1, 10):
                         if number_can_be_inserted(self.grid, number, i, j):
-                            grid[i, j] = number
+                            self.grid[i, j] = number
                             self.solve()
-                            grid[i, j] = 0
+                            self.grid[i, j] = 0
                     return
         print(self.grid)
         input("Show futher solutions?")

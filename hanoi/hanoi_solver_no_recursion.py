@@ -1,3 +1,7 @@
+import sys
+from util.input import get_args
+
+
 class Single_plate_move:
     def __init__(self, start, target):
         self.start = start
@@ -61,5 +65,6 @@ class Hanoi:
 
 
 if __name__ == "__main__":
-    hanoi = Hanoi(1)
+    args = get_args(sys.argv[1:])
+    hanoi = Hanoi(args.num_plates)
     hanoi.solve()

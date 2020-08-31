@@ -44,6 +44,7 @@ class Sudoku_solver:
         while field_idx < self.num_fields:
             self._handle_field(field_idx)
             field_idx = self._get_next_idx(field_idx)
+        print("Solution of sudoku:")
         print(self.grid)
 
 

@@ -1,3 +1,6 @@
+import sys
+from util.input import get_args
+
 
 def move(start, target):
     print(f"Move from {start} to {target}.")
@@ -13,4 +16,5 @@ def solve_hanoi(num_plates, start, target, intermediate):
 
 
 if __name__ == "__main__":
-    solve_hanoi(3, "A", "C", "B")
+    args = get_args(sys.argv[1:])
+    solve_hanoi(args.num_plates, "A", "C", "B")
