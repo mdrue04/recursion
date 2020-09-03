@@ -2,7 +2,7 @@ import sys
 from util.input import get_args
 
 
-class Single_plate_move:
+class SinglePlateMove:
     def __init__(self, start, target):
         self.start = start
         self.target = target
@@ -11,7 +11,7 @@ class Single_plate_move:
         return f"Move from {self.start} to {self.target}."
 
 
-class Multi_plate_move:
+class MultiPlateMove:
     def __init__(self, num_plates, start='A', target='C', intermediate='B'):
         self.start = start
         self.target = target
@@ -33,9 +33,9 @@ class Hanoi:
         if num_plates == 0:
             return
         elif num_plates == 1:
-            self.moves.insert(idx, Single_plate_move(start, target))
+            self.moves.insert(idx, SinglePlateMove(start, target))
         else:
-            self.moves.insert(idx, Multi_plate_move(
+            self.moves.insert(idx, MultiPlateMove(
                 num_plates, start, target, intermediate))
 
     def _resolve_multimove(self, idx, move):
