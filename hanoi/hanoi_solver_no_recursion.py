@@ -43,19 +43,19 @@ class Hanoi:
         self._insert_move(
             idx, move.start, move.intermediate, move.target, move.num_plates-1)
         self._insert_move(
-            idx, move.start, move.target)
+            idx+1, move.start, move.target)
         self._insert_move(
-            idx, move.intermediate, move.target, move.start, move.num_plates-1)
+            idx+2, move.intermediate, move.target, move.start, move.num_plates-1)
 
     def solve(self):
-        self.moves.append(Multi_plate_move(self.num_plates))
+        self.moves.append(MultiPlateMove(self.num_plates))
         move_list_contains_multi_moves = True
         while move_list_contains_multi_moves:
             current_moves = self.moves.copy()
             move_list_contains_multi_moves = False
             idx = 0
             for move in current_moves:
-                if type(move) == Multi_plate_move:
+                if type(move) == MultiPlateMove:
                     move_list_contains_multi_moves = True
                     self._resolve_multimove(idx, move)
                     idx += 3
