@@ -28,6 +28,9 @@ class Hanoi:
         for move in self.moves:
             print(move)
 
+    def return_moves(self):
+        return [move.__str__() for move in self.moves]
+
     def _insert_move(self, idx, start, target,
                      intermediate=None, num_plates=1):
         if num_plates == 0:
