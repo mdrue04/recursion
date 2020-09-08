@@ -1,4 +1,4 @@
-# Solving Sudoku and Hanoi: recursion vs. no recursion
+# Solving Sudoku and Hanoi: recursion vs. iteration
 
 ## What?
 This repository solves two puzzles using two different approaches.
