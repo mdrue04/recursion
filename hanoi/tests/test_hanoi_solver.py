@@ -1,5 +1,5 @@
 import pytest
-import test_utils
+import utils
 from hanoi_solver import solve_hanoi
 from hanoi_solver_no_recursion import Hanoi
 
