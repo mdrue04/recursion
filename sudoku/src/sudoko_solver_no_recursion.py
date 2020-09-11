@@ -2,7 +2,7 @@ from util.data import get_grid
 from util.insertion import number_can_be_inserted
 
 
-class Sudoku_solver:
+class SudokuSolver:
     def __init__(self, grid):
         self.grid = grid
         self.num_columns, self.num_rows = grid.shape
@@ -49,5 +49,5 @@ class Sudoku_solver:
 
 
 if __name__ == "__main__":
-    sudoku_solver = Sudoku_solver(get_grid())
+    sudoku_solver = SudokuSolver(get_grid())
     sudoku_solver.solve()
