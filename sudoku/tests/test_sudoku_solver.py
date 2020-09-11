@@ -5,7 +5,7 @@ import os
 import sys
 dir_path = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.join(dir_path, "../src"))
-from sudoko_solver_no_recursion import Sudoku_solver
+from sudoko_solver_no_recursion import SudokuSolver
 
 
 @pytest.fixture
@@ -36,6 +36,6 @@ def get_grids():
 
 
 def test_sudoku_solver_no_recursion(get_grids):
-    sudoku_solver = Sudoku_solver(get_grids["input"])
+    sudoku_solver = SudokuSolver(get_grids["input"])
     sudoku_solver.solve()
     assert((sudoku_solver.grid == get_grids["result"]).all())
