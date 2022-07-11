@@ -19,7 +19,7 @@ The solutions:
 ### Sudoku
 If you want to try out the solvers, just call them using python3. The input sudoku can be changed in sudoku/example_input/input_sudoku.txt and then just call
 
-> python3 sudoku_solver.py
+>python3 sudoku_solver.py
 
 or
 
